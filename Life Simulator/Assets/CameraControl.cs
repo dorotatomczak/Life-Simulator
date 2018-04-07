@@ -5,15 +5,15 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour {
 
 	protected Vector3 localRotation;
-	protected float cameraDistance = 10f;
-	public float mouseSensitivity = 4f;
-	public float orbitDampening = 10f;
+	public float mouseSensitivity = 4.0f;
+	public float orbitDampening = 10.0f;
+	public float rotateMin = -45.0f;
+	public float rotateMax = 45.0f;
 
 	public float zoomSensitivity= 15.0f;
 	public float zoomSpeed= 5.0f;
 	public float zoomMin= 5.0f;
 	public float zoomMax= 80.0f;
-
 	private float zoom;
 
 	public float dragSpeed = 0.2f;
@@ -26,7 +26,6 @@ public class CameraControl : MonoBehaviour {
 
 	void Update() 
 	{
-
 		zoom -= Input.GetAxis("Mouse ScrollWheel") * zoomSensitivity;
 		zoom = Mathf.Clamp(zoom, zoomMin, zoomMax);
 	}
