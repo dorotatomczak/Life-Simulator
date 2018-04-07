@@ -208,7 +208,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b09f06ba4363847b1d15d63d225cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSpeed: 0.05
+  position:
+    invertPan: 1
+    panSmooth: 7
+    distanceFromGround: 1
+    allowZoom: 1
+    zoomSmooth: 5
+    zoomStep: 5
+    maxZoom: 5
+    minZoom: 80
+    newDistance: 1
+  orbit:
+    xRotation: 50
+    yRotation: 0
+    allowYOrbit: 1
+    yOrbitSmooth: 0.5
 --- !u!81 &805793409
 AudioListener:
   m_ObjectHideFlags: 0
@@ -322,6 +336,42 @@ Prefab:
     - target: {fileID: 9500000, guid: 9954db04f8c03204dbb7c4c792e0f31e, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700016, guid: 9954db04f8c03204dbb7c4c792e0f31e, type: 3}
+      propertyPath: m_UpdateWhenOffscreen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700014, guid: 9954db04f8c03204dbb7c4c792e0f31e, type: 3}
+      propertyPath: m_UpdateWhenOffscreen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700012, guid: 9954db04f8c03204dbb7c4c792e0f31e, type: 3}
+      propertyPath: m_UpdateWhenOffscreen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700010, guid: 9954db04f8c03204dbb7c4c792e0f31e, type: 3}
+      propertyPath: m_UpdateWhenOffscreen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700008, guid: 9954db04f8c03204dbb7c4c792e0f31e, type: 3}
+      propertyPath: m_UpdateWhenOffscreen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700006, guid: 9954db04f8c03204dbb7c4c792e0f31e, type: 3}
+      propertyPath: m_UpdateWhenOffscreen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700004, guid: 9954db04f8c03204dbb7c4c792e0f31e, type: 3}
+      propertyPath: m_UpdateWhenOffscreen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700002, guid: 9954db04f8c03204dbb7c4c792e0f31e, type: 3}
+      propertyPath: m_UpdateWhenOffscreen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 9954db04f8c03204dbb7c4c792e0f31e, type: 3}
+      propertyPath: m_UpdateWhenOffscreen
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9954db04f8c03204dbb7c4c792e0f31e, type: 3}
