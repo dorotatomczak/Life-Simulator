@@ -7,12 +7,13 @@ public class PlayerController : MonoBehaviour {
 
 	private Animator mAnimator;
 	private NavMeshAgent mNavMeshAgent;
-	bool walking; //potem sie przyda do zmiany animacji
+	bool isWalking;
 
 	void Start()
 	{
 		mAnimator = GetComponent<Animator> ();
 		mNavMeshAgent = GetComponent<NavMeshAgent> ();
+		isWalking = false;
 	}
 
 	void Update()
@@ -29,9 +30,11 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		if (mNavMeshAgent.remainingDistance <= mNavMeshAgent.stoppingDistance) {
-			walking = false;
+			isWalking = false;
 		} else {
-			walking = true;
+			isWalking = true;
 		}
+
+		mAnimator.SetBool ("isWalking", isWalking);
 	}
 }
