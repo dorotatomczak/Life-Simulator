@@ -387,17 +387,47 @@ Prefab:
     - target: {fileID: 65719959481745960, guid: 317fb7cfb6ec4c540b684617d945a67d,
         type: 2}
       propertyPath: m_Size.y
-      value: 0.17954785
+      value: 0.17503576
       objectReference: {fileID: 0}
     - target: {fileID: 65719959481745960, guid: 317fb7cfb6ec4c540b684617d945a67d,
         type: 2}
       propertyPath: m_Center.y
-      value: 0.087644726
+      value: 0.09087106
       objectReference: {fileID: 0}
     - target: {fileID: 65719959481745960, guid: 317fb7cfb6ec4c540b684617d945a67d,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65719959481745960, guid: 317fb7cfb6ec4c540b684617d945a67d,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.113282
+      objectReference: {fileID: 0}
+    - target: {fileID: 65719959481745960, guid: 317fb7cfb6ec4c540b684617d945a67d,
+        type: 2}
+      propertyPath: m_Center.x
+      value: -0.0029348657
+      objectReference: {fileID: 0}
+    - target: {fileID: 65719959481745960, guid: 317fb7cfb6ec4c540b684617d945a67d,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 0.008721527
+      objectReference: {fileID: 0}
+    - target: {fileID: 65719959481745960, guid: 317fb7cfb6ec4c540b684617d945a67d,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 0.04521385
+      objectReference: {fileID: 0}
+    - target: {fileID: 54281473252936418, guid: 317fb7cfb6ec4c540b684617d945a67d,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114111223032961426, guid: 317fb7cfb6ec4c540b684617d945a67d,
+        type: 2}
+      propertyPath: rotSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 317fb7cfb6ec4c540b684617d945a67d, type: 2}
