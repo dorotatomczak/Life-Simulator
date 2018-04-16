@@ -52,11 +52,14 @@ public class JoinGame : MonoBehaviour {
         {
             GameObject _roomListItemGO = Instantiate(roomListItemPrefab);
             _roomListItemGO.transform.SetParent(roomListParent);
-            // to do something, no idea for now but he knows 
-            //
-            //
+
+            roomList.Add(_roomListItemGO);
 
 
+        }
+        if (roomList.Count == 0)
+        {
+            status.text = "No available parcels...";
         }
     }
 
