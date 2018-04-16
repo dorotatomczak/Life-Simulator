@@ -7,6 +7,10 @@ public class PlayerController : MonoBehaviour {
 
 	private Animator mAnimator;
 	private NavMeshAgent mNavMeshAgent;
+	Vector3 targetPosition;
+	Vector3 lookAtTarget;
+	Quaternion playerRot;
+	float rotSpeed = 3;
 	bool isWalking;
 
 	void Start()
@@ -18,21 +22,34 @@ public class PlayerController : MonoBehaviour {
 
 	void Update()
 	{
-		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+		if (Input.GetMouseButton (0)) {
+			SetTargetPosition ();
+		}
+		if (isWalking) {
+			Move ();
+		}
+	}
 
+	void SetTargetPosition()
+	{
+		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit hit;
 
-		if (Input.GetMouseButtonDown (0)) 
-		{
-			if (Physics.Raycast (ray, out hit, 100)) {
-				mNavMeshAgent.destination = hit.point;
-			}
-		}
-
-		if (mNavMeshAgent.remainingDistance <= mNavMeshAgent.stoppingDistance) {
-			isWalking = false;
-		} else {
+		if (Physics.Raycast (ray, out hit, 1000)) {
+			targetPosition = hit.point;
+			lookAtTarget = new Vector3 (targetPosition.x - transform.position.x, transform.position.y, targetPosition.z - transform.position.z);
+			playerRot = Quaternion.LookRotation (lookAtTarget);
+			mNavMeshAgent.destination = targetPosition;
 			isWalking = true;
+		}
+	}
+
+	void Move()
+	{
+		transform.rotation = Quaternion.Slerp (transform.rotation, playerRot, rotSpeed * Time.deltaTime);
+
+		if (Mathf.Abs(mNavMeshAgent.remainingDistance - mNavMeshAgent.stoppingDistance) <= 0.04) {
+			isWalking = false;
 		}
 
 		mAnimator.SetBool ("isWalking", isWalking);
