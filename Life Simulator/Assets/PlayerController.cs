@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 
 	private Animator mAnimator;
 	private NavMeshAgent mNavMeshAgent;
+
 	Vector3 targetPosition;
 	Vector3 lookAtTarget;
 	Quaternion playerRot;
@@ -43,6 +44,7 @@ public class PlayerController : MonoBehaviour {
 			isWalking = true;
 		}
 	}
+
 
 	void Move()
 	{
