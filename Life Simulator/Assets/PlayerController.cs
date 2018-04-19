@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		transform.rotation = Quaternion.Slerp (transform.rotation, playerRot, rotSpeed * Time.deltaTime);
 
-		if (mNavMeshAgent.remainingDistance <= mNavMeshAgent.stoppingDistance) {
+		if ( Vector3.Distance ( transform.position , targetPosition ) < 1) {
 			isWalking = false;
 		}
 
