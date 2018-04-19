@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
 		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit hit;
 
-		if (Physics.Raycast (ray, out hit, 1000)) {
+		if (Physics.Raycast (ray, out hit, 20)) {
 			targetPosition = hit.point;
 			lookAtTarget = new Vector3 (targetPosition.x - transform.position.x, transform.position.y, targetPosition.z - transform.position.z);
 			playerRot = Quaternion.LookRotation (lookAtTarget);
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		transform.rotation = Quaternion.Slerp (transform.rotation, playerRot, rotSpeed * Time.deltaTime);
 
-		if (Mathf.Abs(mNavMeshAgent.remainingDistance - mNavMeshAgent.stoppingDistance) <= 0.04) {
+		if (mNavMeshAgent.remainingDistance <= mNavMeshAgent.stoppingDistance) {
 			isWalking = false;
 		}
 

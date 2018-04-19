@@ -130,15 +130,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b09f06ba4363847b1d15d63d225cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 4
-  orbitDampening: 10
-  rotateMin: -45
-  rotateMax: 45
-  zoomSensitivity: 15
-  zoomSpeed: 5
-  zoomMin: 5
-  zoomMax: 80
-  dragSpeed: 0.1
+  rotationSettings:
+    mouseSensitivity: 4
+    orbitDampening: 10
+    rotateMin: -45
+    rotateMax: 45
+  zoomSettings:
+    zoomSensitivity: 15
+    zoomSpeed: 5
+    zoomMin: 5
+    zoomMax: 80
+  dragSetttings:
+    dragSpeed: 0.2
 --- !u!124 &124166084518396924
 Behaviour:
   m_ObjectHideFlags: 1

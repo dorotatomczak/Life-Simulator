@@ -1844,13 +1844,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1342960885812334}
-  m_LocalRotation: {x: 0.09947462, y: -0, z: -0, w: 0.9950401}
-  m_LocalPosition: {x: 0, y: 0.276, z: -0.358}
+  m_LocalRotation: {x: 0, y: 0.9659258, z: -0.2588191, w: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4792344282941184}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 11.418, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: 180, z: 0}
 --- !u!4 &4363014695434208
 Transform:
   m_ObjectHideFlags: 1
@@ -2106,7 +2106,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1451792317418608}
-  m_LocalRotation: {x: -0, y: 0.9998086, z: -0, w: 0.019566216}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2122,7 +2122,7 @@ Transform:
   - {fileID: 4838380798373106}
   m_Father: {fileID: 4792344282941184}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 177.75801, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4721934765366560
 Transform:
   m_ObjectHideFlags: 1
@@ -2198,16 +2198,16 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1025461845887694}
-  m_LocalRotation: {x: 0.09947462, y: -0, z: -0, w: 0.9950401}
-  m_LocalPosition: {x: 0, y: 0.276, z: -0.358}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 224156064979770410}
   - {fileID: 4708692310336676}
   - {fileID: 4334954112943480}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 11.418, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4798169500200498
 Transform:
   m_ObjectHideFlags: 1
@@ -3178,11 +3178,11 @@ MonoBehaviour:
     rotateMax: 35
   zoomSettings:
     zoomSensitivity: 15
-    zoomSpeed: 5
+    zoomSpeed: 10
     zoomMin: 5
     zoomMax: 80
   dragSetttings:
-    dragSpeed: 0.2
+    dragSpeed: 0.5
 --- !u!114 &114615725891567338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4012,10 +4012,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 0.5
-  m_Acceleration: 12
+  m_Speed: 4
+  m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 2500
+  m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
