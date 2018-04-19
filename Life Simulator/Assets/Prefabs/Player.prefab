@@ -3175,7 +3175,7 @@ MonoBehaviour:
     mouseSensitivity: 4
     orbitDampening: 10
     rotateMin: 0
-    rotateMax: 35
+    rotateMax: 90
   zoomSettings:
     zoomSensitivity: 15
     zoomSpeed: 10
