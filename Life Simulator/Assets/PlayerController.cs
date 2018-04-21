@@ -56,4 +56,8 @@ public class PlayerController : MonoBehaviour {
 
 		mAnimator.SetBool ("isWalking", isWalking);
 	}
+    public static void Eat()
+    {
+        StatsController.RefillHungerBar();
+    }
 }

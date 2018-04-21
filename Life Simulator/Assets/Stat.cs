@@ -51,4 +51,21 @@ public class Stat {
 		this.MaxVal = maxVal;
 		this.CurrentVal = currentVal;
 	}
+
+    public void ChangeCurrentValue(ref bool refilling, float refillingSpeed)
+    {
+        if (!refilling)                                                         //if there is no interaction 
+        {                                                                       //stats are decreasing 
+            this.CurrentVal -= this.Rate * Time.deltaTime;                      //in interaction we increase specific Stat
+        }                                                                       //untill its full
+        else
+        {
+            this.CurrentVal += refillingSpeed * Time.deltaTime;
+            if (this.CurrentVal >= 100)
+            {
+                this.CurrentVal = 100;
+                refilling = false;
+            }
+        }
+    }
 }
