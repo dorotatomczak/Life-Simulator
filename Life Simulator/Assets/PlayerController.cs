@@ -58,6 +58,15 @@ public class PlayerController : MonoBehaviour {
 	}
     public static void Eat()
     {
-        StatsController.RefillHungerBar();
+        StatsController.RefillHungerBar(6.0f);
+    }
+    public static void Sleep()
+    {
+        StatsController.RefillEnergyBar(4.0f);
+    }
+    public static void Sit()
+    {
+        //sitting animation
+        StatsController.RefillEnergyBar(2.0f);
     }
 }

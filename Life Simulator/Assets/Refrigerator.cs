@@ -5,6 +5,6 @@ using UnityEngine;
 public class Refrigerator : MonoBehaviour {
     void OnMouseUp()
     {
-        OptionController.ChooseOption();
+        PlayerController.Eat();
     }
 }

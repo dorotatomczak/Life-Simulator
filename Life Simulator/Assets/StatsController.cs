@@ -7,6 +7,8 @@ public class StatsController : MonoBehaviour {
     public static bool refillingEnergyBar;
     public static bool refillingHungerBar;
 
+    public static float refillingSpeed;
+
     [SerializeField]
 	Stat hunger;
 
@@ -37,22 +39,24 @@ public class StatsController : MonoBehaviour {
     }
 
 	void Update () {
-        hunger.ChangeCurrentValue(ref refillingHungerBar, 6.0f);
+        hunger.ChangeCurrentValue(ref refillingHungerBar, refillingSpeed);
 
 		bladder.CurrentVal -= bladder.Rate * Time.deltaTime;
 
-        energy.ChangeCurrentValue(ref refillingEnergyBar, 4.0f);
+        energy.ChangeCurrentValue(ref refillingEnergyBar, refillingSpeed);
 
         social.CurrentVal -= social.Rate * Time.deltaTime;
 		hygiene.CurrentVal -= hygiene.Rate * Time.deltaTime;
 		fun.CurrentVal -= fun.Rate * Time.deltaTime;
 	}
 
-    public static void RefillEnergyBar() {
+    public static void RefillEnergyBar(float speed) {
         refillingEnergyBar = true;
+        refillingSpeed = speed;
     }
 
-    public static void RefillHungerBar() {
+    public static void RefillHungerBar(float speed) {
         refillingHungerBar = true;
+        refillingSpeed = speed;
     }
 }

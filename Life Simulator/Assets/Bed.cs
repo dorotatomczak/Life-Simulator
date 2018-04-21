@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Bed : MonoBehaviour {
     void OnMouseUp() {
-        StatsController.RefillEnergyBar();
+        PlayerController.Sleep();
     }
 }
