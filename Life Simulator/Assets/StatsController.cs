@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class StatsController : MonoBehaviour {
+public class StatsController : NetworkBehaviour
+{
 
     public static bool refillingEnergyBar;
     public static bool refillingHungerBar;

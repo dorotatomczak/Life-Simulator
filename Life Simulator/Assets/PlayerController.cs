@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.AI;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : NetworkBehaviour {
 
 	private Animator mAnimator;
 	private NavMeshAgent mNavMeshAgent;
@@ -23,7 +24,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Update()
 	{
-		if (Input.GetMouseButton (0)) {
+        if (Input.GetMouseButton (0)) {
 			SetTargetPosition ();
 		}
 		if (isWalking) {
